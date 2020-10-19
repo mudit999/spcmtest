@@ -1,7 +1,8 @@
-version: 1.0
+version: '3.3'
 
 services:
-	image: mudit999/spcm-test-repo
-	ports:
-		- "8000:80"
-	restart: always
+   webapp:
+     image: mudit999/spcm-test-repo
+     ports:
+       - "8000:80"
+     restart: always
