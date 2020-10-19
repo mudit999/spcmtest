@@ -1,9 +1,5 @@
-FROM centos
+FROM phpmyadmin:latest
 
-RUN yum update -y
-
-RUN yum install nginx -y
-
-COPY form.html /home/vagrant/DockerFiles/form.html
-
-RUN systemctl enable nginx
+COPY form.html /var/www/html/form.html
+COPY apache2.conf /etc/apache2/apache2.conf
+#ENTRYPOINT bash
